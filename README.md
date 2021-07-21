@@ -17,7 +17,7 @@ Perses framework for Distributed Mobile Applications Performance Analysis.
 
 5. [Verify the possibility of .metal instance creation](MetalVerification.md)
 
-6. Obtain perses engine by sending an email to slasom (at) unex.es
+**6. Obtain Perses Engine by sending an email to slasom (at) unex.es**
 
 7. Into perses engine folder:
 - `npm install`
