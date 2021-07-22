@@ -19,7 +19,7 @@ There are two different ways to use Perses: (i) An standalone uasge in the devel
 
 5. [Verify the possibility of .metal instance creation](MetalVerification.md)
 
-6. Obtain Perses Engine by sending an email to slasom (at) unex.es
+6. Download [Perses Engine](https://github.com/perses-org/perses-engine) or sending an email to slasom (at) unex.es
 
 7. Into perses engine folder:
 - `npm install`
@@ -81,7 +81,7 @@ Perses can be integrated with a devops cycle with the help of [GHA](https://gith
  - Obtain PERSES_PAT access token  by sending an email to slasom (at) unex.es
  
 ## Configuration
-1. Copy [GHA workflow](https://github.com/perses-org/gha/blob/master/workflow/perses.yml) into your repo ``.github/workflow/perses.yml`` 
+1. Copy [GHA workflow](https://github.com/perses-org/gha/blob/master/workflow/perses-workflow.yml) into your repo ``.github/workflow/perses.yml`` 
 2. Copy perses [configuration template](https://github.com/perses-org/gha/blob/master/template/.perses.yml) ``.perses.yml`` to the root of your repo and fill it in with your preferences.
 3. Include the following secrets with your AWS credentials:
    - AWS_ACCESS_KEY
