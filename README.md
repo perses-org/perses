@@ -3,9 +3,11 @@
 
 Perses framework for Distributed Mobile Applications Performance Analysis.
 
-  
+There are two different ways to use Perses: (i) An standalone uasge in the development environment, manually run by an operator and (ii) integrate Perses in the CI/CD Pipeline with Github Actions so it will be automatically launched. The following two sections deteail each of those kinds of usage.
 
-# Prerequisites
+# Standalone usage
+
+## Prerequisites
 
 1. Download and install git -> https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
@@ -24,7 +26,7 @@ Perses framework for Distributed Mobile Applications Performance Analysis.
 
   
 
-# Configure Test
+## Configure Test
 
 Configure *test/credentialExample.yaml*
 
@@ -43,7 +45,7 @@ Configure *test/configExample.yaml*
 
   
 
-# Usage
+## Command line usage
 
 Usage: `node index -a action -g <config.yaml> -c <credentials.yaml> -n projectName`
 
@@ -89,9 +91,7 @@ Perses can be integrated with a devops cycle with the help of [GHA](https://gith
    - PERSES_PAT
 
 # Recommendations
-
-### Time wait
-**EC2 - C5.metal: (1.5 CPU and 3G RAM)**
+Based on our experience, depending on the number of devices that compose the experiment configuration, we propose the folloing values for the ``time_wait`` parameter in the config (We assume a **EC2 - C5.metal: (1.5 CPU and 3G RAM)** as the exprimental host where Perses is running):
 - 3 min for 2 devices
 - 3 min for 4 devices
 - 4 min for 8 devices
