@@ -78,7 +78,6 @@ Perses can be integrated with a devops cycle with the help of [GHA](https://gith
  - Graddle configured to be run into the project (Having the script gradlew / graddle.bat [with execution rights configured propperly](https://stackoverflow.com/questions/17668265/gradlew-permission-denied) in the root of the repo)
  - APK build is configured to be generated at ``/app/build/outputs/apk/debug/app-debug.apk``
  - APK for Espresso tests build is configured to be generated at ``/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk``
- - Obtain PERSES_PAT access token  by sending an email to slasom (at) unex.es
  
 ## Configuration
 1. Copy [GHA workflow](https://github.com/perses-org/gha/blob/master/workflow/perses-workflow.yml) into your repo ``.github/workflow/perses.yml`` 
@@ -88,7 +87,6 @@ Perses can be integrated with a devops cycle with the help of [GHA](https://gith
    - AWS_SECRET_KEY
    - KEY_NAME
    - KEY_PEM
-   - PERSES_PAT
 
 # Recommendations
 Based on our experience, depending on the number of devices that compose the experiment configuration, we propose the folloing values for the ``time_wait`` parameter in the config (We assume a **EC2 - C5.metal: (1.5 CPU and 3G RAM)** as the exprimental host where Perses is running):
