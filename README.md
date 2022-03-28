@@ -26,12 +26,17 @@ There are two different ways to use Perses: (i) An standalone uasge in the devel
 
 
 
-## Configuration File
+## Configuration File *test/configExample.yaml*
+Perses needs a configuration file where the characteristics of the virtual scenario, the tests, and the desired QoS are defined.
+
+
+[![Perses configuration file]](https://ibb.co/nbfLwBG)
+
 
 **Author:** name of the operator. Used as a prefix to avoid name collision.
 
 **Scenario:** to deploy the virtual scenario, it is necessary to define the infrastructure characteristics. These characteristics are defined in the following parameters.
-_Instance Type_, this property indicates the AWS EC2 instance type to host the virtual scenarios. Currently, Perses uses AWS as a cloud infrastructure provider to deploy virtual scenarios, but it can be easily extended to other providers. Please note that to be able to emulate Android mobile devices, the cloud instance requires [KVM virtualization] (https://developer.android.com/studio/run/emulator-acceleration). Only instances with high capacity provide this characteristic. For example, the.metal of AWS EC2 (for example, _c5.metal_).
+_Instance Type_, this property indicates the AWS EC2 instance type to host the virtual scenarios. Currently, Perses uses AWS as a cloud infrastructure provider to deploy virtual scenarios, but it can be easily extended to other providers. Please note that to be able to emulate Android mobile devices, the cloud instance requires [KVM virtualization](https://developer.android.com/studio/run/emulator-acceleration). Only instances with high capacity provide this characteristic. For example, the.metal of AWS EC2 (for example, _c5.metal_).
 _Region_, acronym for the region where the AWS resources are to be used, e.g., _eu-west-1_.
 _AMI_ID_, this parameter specifies the Amazon Machine Image (AMI) to be used. Perses is prepared to use Ubuntu Server 18.04. Please note that depending on the region used, the AMI ID changes even if it is the same OS.
 
@@ -59,7 +64,7 @@ Tests: this parameter defines the set of tests to evaluate the application (E2E 
 **Log Tags:** the logs of devices offer much information about the system, services, etc. This parameter allows indicating keywords to filter the logs of the virtual devices and obtain important information. These keywords must be included in the implementation of the application to appear in the log. For example, we can indicate in the log via the keyword _"ExecutionTime"_, the processing time of the mobile phones. _Custom_ indicates the name of the file containing the custom function to analyze the results obtained from the log tag (e.g., function to calculate the mean _Execution Time_).
 
 
-## Configure Test
+## Credentials Configuration
 
 Configure *test/credentialExample.yaml*
 
@@ -68,13 +73,6 @@ Configure *test/credentialExample.yaml*
 - AWS Key '.pem' absolute path
 - AWS Key name
 
-
-Configure *test/configExample.yaml*
-- Author
-- Region (if necessary)
-- Apk absolute path (the Apk test is in 'test' folder )
-- Log tags
-- Tests
 
   
 
