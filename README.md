@@ -30,7 +30,7 @@ There are two different ways to use Perses: (i) An standalone uasge in the devel
 Perses needs a configuration file where the characteristics of the virtual scenario, the tests, and the desired QoS are defined.
 
 
-[![Perses configuration file]](https://i.ibb.co/t4cJHzG/Perse-config-file.png)
+![](Perse-config file.png)
 
 
 **Author:** name of the operator. Used as a prefix to avoid name collision.
